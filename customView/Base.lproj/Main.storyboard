@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="customView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COo-rg-7vA" customClass="CustomView" customModule="customView" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="T9b-VF-GYk"/>
+                                    <constraint firstAttribute="height" constant="200" id="u9c-pV-XRG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="piePercentage">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDx-wy-6NY">
+                                <rect key="frame" x="270" y="550" width="61" height="30"/>
+                                <state key="normal" title="Animate!">
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updatePieChart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzT-Qd-cX6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InO-4N-GXf">
+                                <rect key="frame" x="281" y="120" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.97320844240000004" green="0.47999121080000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPieChart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kV-sR-nNK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-Jg-Wal">
+                                <rect key="frame" x="276" y="510" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="G28-7e-cSQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="InO-4N-GXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILd-KE-ObB"/>
+                            <constraint firstItem="COo-rg-7vA" firstAttribute="top" secondItem="InO-4N-GXf" secondAttribute="bottom" constant="50" id="KY4-Wj-Ka1"/>
+                            <constraint firstItem="COo-rg-7vA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M9L-cc-2RL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SDx-wy-6NY" secondAttribute="bottom" constant="20" id="WkV-lF-q8J"/>
+                            <constraint firstItem="SDx-wy-6NY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xr5-iu-QlS"/>
+                            <constraint firstItem="InO-4N-GXf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="5" id="YNb-iO-cOp"/>
+                            <constraint firstItem="SDx-wy-6NY" firstAttribute="top" secondItem="ZQS-Jg-Wal" secondAttribute="bottom" constant="10" id="exx-Xd-9XY"/>
+                            <constraint firstItem="ZQS-Jg-Wal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fl6-Y2-YZl"/>
+                            <constraint firstItem="COo-rg-7vA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sQO-mF-yjI"/>
+                            <constraint firstItem="InO-4N-GXf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="seI-MX-un1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YNb-iO-cOp"/>
+                                <exclude reference="seI-MX-un1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="COo-rg-7vA" id="2uR-2h-x4H"/>
+                        <outlet property="txtValor" destination="ZQS-Jg-Wal" id="VrB-df-b81"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="464"/>
+        </scene>
+    </scenes>
+</document>
